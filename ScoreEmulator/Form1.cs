@@ -15,7 +15,7 @@ namespace ScoreEmulator
         //Create class variables - accessible in every method and available for the lifetime of the form(window)
         int scoreTotal;
         int scoreCount;
-        int averageScore;
+
         public Form1()
         {
             InitializeComponent();
@@ -31,25 +31,25 @@ namespace ScoreEmulator
         {
             //Validation of a number input
             int score = Convert.ToInt32(txtScore.Text);
-            scoreTotal = scoreTotal + score;
-            txtScoreTotal.Text = scoreTotal.ToString();
+            scoreTotal = scoreTotal + score; //scoreTotal =+Score is another way of doing this correct?
+            txtScoreTotal.Text = scoreTotal.ToString(); //the input of the txtScoreTotal is converted to a string
             scoreCount++; //Add one to scoreCount
-            txtScoreCount.Text = scoreCount.ToString();
-            averageScore = scoreTotal / scoreCount;
-            txtAverage.Text = averageScore.ToString();
-            txtScore.Text = "";
-            txtScore.Focus();
+            txtScoreCount.Text = scoreCount.ToString(); //the input of the score count is converted to a string
+            double averageScore = scoreTotal / scoreCount; //the Average score is a double number that is equal of the scoreTotal divided by the scoreCount
+            txtAverage.Text = averageScore.ToString(); //the result of the average is equal to a string
+            txtScore.Text = ""; //empty string for txtScore
+            txtScore.Focus(); //focus on the txtScore after the code is executed
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            scoreCount = 0;
-            scoreTotal = 0;
-            averageScore = 0;
-            txtScoreTotal.Text = "";
-            txtScoreCount.Text = "";
-            txtAverage.Text = "";
-            txtScore.Focus();
+            scoreCount = 0; //Sets scoreCount to 0
+            scoreTotal = 0; //Sets scoreTotal to 0
+
+            txtScoreTotal.Text = ""; //txtScoreTotal is cleared
+            txtScoreCount.Text = ""; //tktScoreCount is cleared
+            txtAverage.Text = ""; //txtAverage is cleared
+            txtScore.Focus(); //Focus is set on on the txtScore
         }
 
         private void button3_Click(object sender, EventArgs e)
