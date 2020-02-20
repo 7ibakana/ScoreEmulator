@@ -13,8 +13,8 @@ namespace ScoreEmulator
     public partial class Form1 : Form
     {
         //Create class variables - accessible in every method and available for the lifetime of the form(window)
-        int scoreTotal;
-        int scoreCount;
+        int scoreTotal; //Declaring the int class variable type to scoreTotal
+        int scoreCount; //Declaring the int class variable type to scoreCount
 
         public Form1()
         {
@@ -38,7 +38,7 @@ namespace ScoreEmulator
             double averageScore = scoreTotal / scoreCount; //the Average score is a double number that is equal of the scoreTotal divided by the scoreCount
             txtAverage.Text = averageScore.ToString(); //the result of the average is equal to a string
             txtScore.Text = ""; //empty string for txtScore
-            txtScore.Focus(); //focus on the txtScore after the code is executed
+            txtScore.Focus(); //focus on the txtScore after the code is executed and result is generated
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace ScoreEmulator
             txtScoreTotal.Text = ""; //txtScoreTotal is cleared
             txtScoreCount.Text = ""; //tktScoreCount is cleared
             txtAverage.Text = ""; //txtAverage is cleared
-            txtScore.Focus(); //Focus is set on on the txtScore
+            txtScore.Focus(); //Focus is set on on the txtScore where the result will be
         }
 
         private void button3_Click(object sender, EventArgs e)
